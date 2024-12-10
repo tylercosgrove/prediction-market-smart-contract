@@ -3,7 +3,7 @@ pragma solidity ^0.8.23;
 
 /**
  * @title PredictionMarket
- * @notice A single-instance prediction market with initialization tied directly to the provided ETH.
+ * @notice A single prediction market.
  */
 
 contract PredictionMarket {
@@ -23,7 +23,6 @@ contract PredictionMarket {
     uint256 public initialLiquidity;
     bool public initialized;
 
-    // Optional: Add metadata about the market
     string public marketQuestion;
     string public marketDescription;
 

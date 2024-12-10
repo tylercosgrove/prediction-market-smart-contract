@@ -29,8 +29,8 @@ contract PredictionMarketFactory {
 
     /**
      * @notice Create a new prediction market instance.
-     * @param _owner The owner/oracle of the new prediction market.
-     * @param _question A string describing the event or question of the market.
+     * @param _owner Owner/oracle of the new prediction market.
+     * @param _question Market event question.
      * @param _description More detailed description.
      * @return market The address of the newly created prediction market contract.
      */
@@ -38,7 +38,7 @@ contract PredictionMarketFactory {
         address _owner,
         string memory _question,
         string memory _description
-    ) external onlyFactoryOwner returns (address market) {
+    ) external returns (address market) {
         PredictionMarket newMarket = new PredictionMarket(
             _owner,
             _question,
